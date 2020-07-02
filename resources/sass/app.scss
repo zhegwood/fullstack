@@ -1,0 +1,157 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+// Bulma
+@import "~bulma/bulma";
+
+$white: #ffffff;
+$body-background: #f2f2f2;
+$gray-text: #4b4b4b;
+$lighter-blue: #0d6ef0;
+$blue-text: #0546a0;
+$red-text: #ef0e12;
+$fabric-picture-text-bg: #e8e8e8;
+
+html,
+body {
+    background-color: $body-background;
+    color: $gray-text;
+}
+small {
+    font-size: 50%;
+}
+.navbar {
+    background-color: $body-background;
+    margin: 2rem;
+    .navbar-brand {
+        .navbar-item {
+            padding: 0;
+            img {
+                max-height: 50px;
+            }
+        }
+    }
+    .navbar-menu {
+        .navbar-item {
+            padding: 1rem 15px;
+            .menu-text {
+                border-bottom: 3px solid transparent;
+                font-family: "Bungee", cursive;
+                font-size: 1rem;
+            }
+            img {
+                max-height: 50px;
+            }
+        }
+        .navbar-item:hover,
+        .navbar-item.current {
+            color: $gray-text;
+            background-color: transparent;
+            .menu-text {
+                border-bottom: 3px solid $lighter-blue;
+            }
+        }
+    }
+}
+.padlock-icon {
+    vertical-align: text-top;
+}
+.secure-checkout {
+    color: $gray-text;
+}
+.product-image-container {
+    align-items: center;
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+}
+.page-heading {
+    color: $blue-text;
+    font-family: "Bungee", cursive;
+    margin-bottom: 0.5rem !important;
+}
+.with-border-right {
+    border-right: 2px solid $white;
+}
+.big-text {
+    font-size: 1.25rem;
+}
+.small-text {
+    font-size: 0.75rem;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.pricing-text {
+    color: $red-text;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+.gray-link {
+    color: $gray-text;
+    text-decoration: underline;
+}
+.add-to-cart-button,
+.add-to-cart-button:focus {
+    background-color: $lighter-blue;
+    border-radius: 8px;
+    color: $white;
+    font-family: "Bungee", cursive;
+    font-size: 1.25rem;
+    height: 3.5rem;
+}
+.add-to-cart-button:hover {
+    background-color: darken($lighter-blue, 5%);
+    color: $white;
+    font-family: "Bungee", cursive;
+}
+.save-for-later {
+    font-family: "Bungee", cursive;
+    font-size: 0.85rem;
+    a {
+        border-bottom: 3px solid $lighter-blue;
+        color: $gray-text;
+        display: inline-block;
+        line-height: 0.9rem;
+    }
+}
+.divider {
+    border: 1px solid $white;
+    height: 0;
+    margin: 2rem 0;
+}
+.choose-fabric {
+    color: $blue-text;
+    font-family: "Bungee", cursive;
+    font-weight: 400;
+    margin-bottom: 0 !important;
+}
+.picture-frame {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    .picture-container {
+        padding: 1rem 0.1rem;
+    }
+    .picture-text {
+        background-color: $fabric-picture-text-bg;
+        border: 2px solid transparent;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 100;
+        padding: 0.5rem;
+    }
+}
+.picture-frame.is-active,
+.picture-frame:hover {
+    border: 2px solid $lighter-blue;
+    .picture-text {
+        background-color: $lighter-blue;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        color: $white;
+    }
+}
